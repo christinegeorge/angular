@@ -1,0 +1,24 @@
+.grid-item {
+    height: 100px;
+    width: 100%;
+    border: 2px solid black;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+}
+.inner-container {
+    display: flex;
+    width: 100%;
+}
+@media only screen and (max-width: 720px) {
+    [class="inner-container"] {
+        display: grid;
+    }
+}
+@media only screen and (max-width: 360px) {
+    [class="container"] {
+        display: grid;
+    }
+}

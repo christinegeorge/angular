@@ -1,0 +1,15 @@
+
+<div class="outer">
+  <div class="container">
+    <mat-grid-list cols="3" rowHeight="200px">
+      <mat-grid-tile
+          *ngFor="let tile of tiles"
+          [style.background]="tile.color" [style.border]="'1px'">
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <div class="buttons">
+    <button (click)="forward()">Forward</button>
+    <button (click)="backward()">Backward</button>
+  </div>
+</div>

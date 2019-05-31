@@ -1,0 +1,16 @@
+<div class="list-container">
+  <h3 class="list-heading">List</h3>
+
+  <mat-list class="name-list">
+    <mat-list-item class="name-list-item" *ngFor="let name of nameList; let i= index" [ngStyle]="{'redText': (i%3===0)}">{{name}}</mat-list-item>
+  </mat-list>
+
+  <mat-divider></mat-divider>
+
+  <mat-form-field class="form-field">
+    <label for="input">Enter Item Here</label>
+    <input matInput [(ngModel)]="nameInput" name="input">
+  </mat-form-field>
+
+  <button mat-raised-button class="action-button" (click)="addName()" [disabled]="nameInput.length < 1">Insert</button>
+</div>
